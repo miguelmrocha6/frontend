@@ -340,8 +340,7 @@
     function getApiBase() {
       const saved = localStorage.getItem('api-base');
       if (saved) return saved.replace(/\/$/, '');
-      if (location.protocol === 'file:' || location.port === '5500') return 'https://backend-tdyh.onrender.com';
-      return location.origin;
+      return 'https://backend-tdyh.onrender.com';
     }
 
     apiInput.value = getApiBase();
